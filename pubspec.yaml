@@ -38,6 +38,7 @@ dependencies:
   flutter_gen_runner: ^5.12.0
   build_runner: ^2.11.1
   easy_localization: ^3.0.8
+  flutter_native_splash: ^2.4.7
 
 dev_dependencies:
   flutter_test:
@@ -74,7 +75,7 @@ flutter:
 
 
   fonts:
-    - family: DMSerif
+    - family: DMSerif-Regular
       fonts:
         - asset: assets/fonts/DMSerif-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf

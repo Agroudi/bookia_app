@@ -1,0 +1,22 @@
+flutter_native_splash:
+
+  color: "#FFFFFF"
+  image: assets/icons/logo.png
+
+  #! ANDROID 12+ configuration:
+  android_12:
+    color: "#FFFFFF"
+
+    # center-logo
+    # If this parameter is not specified, the app's launcher icon will be used instead.
+    # Please note that the splash screen will be clipped to a circle on the center of the screen.
+    # with background: 960×960 px (fit within circle 640px in diameter)
+    # without background: 1152×1152 px (fit within circle 768px in diameter)
+    # ensure that the most important design elements of your image are placed within a circular area
+    image: assets/images/splash.png
+    icon_background_color: "#FFFFFF"
+
+    # branding:
+    # The branding image dimensions must be 800x320 px.
+    #branding:      assets/dart.png
+    #branding_dark: assets/dart_dark.png

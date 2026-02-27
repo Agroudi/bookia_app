@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Image.asset(Assets.images.onBoardingBg.path, fit: BoxFit.contain)
+          Assets.images.onBoardingBg.image(width: 375.w, height: 812.h)
         ],
       ),
     );

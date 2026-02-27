@@ -1,3 +1,6 @@
 {
-  "aaa" : "aaa"
+  "on_boarding_statement" : "Order Your Book Now!",
+  "register" : "Register",
+  "login" : "Login"
+
 }
