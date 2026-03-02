@@ -6,5 +6,6 @@ abstract class  LocaleKeys {
   static const on_boarding_statement = 'on_boarding_statement';
   static const register = 'register';
   static const login = 'login';
+  static const login_statement = 'login_statement';
 
 }

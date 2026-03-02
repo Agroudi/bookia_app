@@ -18,11 +18,20 @@ class $AssetsIconsGen {
   AssetGenImage get successmark =>
       const AssetGenImage('assets/icons/Successmark.png');
 
+  /// File path: assets/icons/apple.svg
+  String get apple => 'assets/icons/apple.svg';
+
+  /// File path: assets/icons/eye.svg
+  String get eye => 'assets/icons/eye.svg';
+
+  /// File path: assets/icons/google.svg
+  String get google => 'assets/icons/google.svg';
+
   /// File path: assets/icons/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/icons/logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [successmark, logo];
+  List<dynamic> get values => [successmark, apple, eye, google, logo];
 }
 
 class $AssetsImagesGen {

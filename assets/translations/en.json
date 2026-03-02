@@ -1,6 +1,6 @@
 {
   "on_boarding_statement" : "Order Your Book Now!",
   "register" : "Register",
-  "login" : "Login"
-
+  "login" : "Login",
+  "login_statement" : "Welcome back! Glad\n to see you, Again!"
 }

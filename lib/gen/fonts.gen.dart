@@ -11,6 +11,6 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: DMSerif
-  static const String dMSerif = 'DMSerif';
+  /// Font family: DMSerif-Regular
+  static const String dMSerifRegular = 'DMSerif-Regular';
 }
