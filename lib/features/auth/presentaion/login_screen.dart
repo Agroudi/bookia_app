@@ -11,11 +11,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_svg/svg.dart';
 
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatelessWidget
+{
   const LoginScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -34,43 +36,44 @@ class LoginScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("Forgot Password?", style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6))),
+                  Text("Forgot Password?", style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp)),
                 ]),
               SizedBox(height: 30.h),
               AppButton(txt: "Login", OnTap: (){}),
               SizedBox(height: 34.h),
-              Row(children: [
-                Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, endIndent: 45,)),
-                Text('Or', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6))),
-                Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, indent: 45)),
-              ]),
+              Row(
+                  children: [
+                    Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, endIndent: 45,)),
+                    Text('Or', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6))),
+                    Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, indent: 45)),
+                  ]),
               SizedBox(height: 21.h),
-              GestureDetector(
-            onTap: (){},
-            child: Container(
-              height: 50.h,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(
-                  color: AppColors.BorderColor,
+              InkWell(
+                onTap: (){},
+                child: Container(
+                  height: 50.h,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: AppColors.BorderColor,
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(Assets.icons.google),
+                      const SizedBox(width: 12),
+                      Text(
+                        "Sign in with Google",
+                        style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(Assets.icons.google),
-                  const SizedBox(width: 12),
-                  Text(
-                    "Sign in with Google",
-                    style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6)),
-                  ),
-                ],
-              ),
-            ),
-          ),
               SizedBox(height: 15.h),
-              GestureDetector(
+              InkWell(
                 onTap: (){},
                 child: Container(
                   height: 50.h,
@@ -88,19 +91,19 @@ class LoginScreen extends StatelessWidget {
                       const SizedBox(width: 12),
                       Text(
                         "Sign in with Apple",
-                        style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6)),
+                        style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp),
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: 62.h),
+              Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account?", style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black)),
+                  Text("Don't have an account?", style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black, fontSize: 14.sp)),
                   SizedBox(width: 5.w),
-                  Text('Register Now', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Primary))
+                  Text('Register Now', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Primary, fontSize: 14.sp))
                 ])
             ],
           ),
