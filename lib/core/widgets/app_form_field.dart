@@ -37,7 +37,7 @@ class _AppFormFieldState extends State<AppFormField> {
         fillColor: AppColors.FormColor,
         hintText: widget.hintTxt,
         suffixIcon: widget.hintTxt == "Enter your password" ? Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(14.0),
           child: InkWell(onTap: () => setState(() => widget.obsecureText = !widget.obsecureText),child: SvgPicture.asset(Assets.icons.eye)),) : null,
         hintStyle: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 15.sp)
       )

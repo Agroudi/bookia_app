@@ -3,8 +3,11 @@ import 'package:bookia_app/core/theme/text_style.dart';
 import 'package:bookia_app/core/widgets/app_button.dart';
 import 'package:bookia_app/core/widgets/app_form_field.dart';
 import 'package:bookia_app/core/widgets/back_button.dart';
+import 'package:bookia_app/features/auth/presentaion/widgets/sign_button.dart';
+import 'package:bookia_app/features/auth/presentaion/widgets/text_button.dart';
 import 'package:bookia_app/gen/assets.gen.dart';
 import 'package:bookia_app/gen/locale_keys.g.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -36,79 +39,59 @@ class LoginScreen extends StatelessWidget
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("Forgot Password?", style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp)),
+                  TxtButton(
+                      txt: "Forgot Password?",
+                    txtColor: AppColors.Black.withOpacity(0.6),
+                    OnTap: (){}
+                  )
                 ]),
               SizedBox(height: 30.h),
-              AppButton(txt: "Login", OnTap: (){}),
+              AppButton(txt: "Login", OnTap: (){login();}),
               SizedBox(height: 34.h),
               Row(
                   children: [
                     Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, endIndent: 45,)),
-                    Text('Or', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6))),
+                    Text('Or', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp)),
                     Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, indent: 45)),
                   ]),
               SizedBox(height: 21.h),
-              InkWell(
-                onTap: (){},
-                child: Container(
-                  height: 50.h,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: AppColors.BorderColor,
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(Assets.icons.google),
-                      const SizedBox(width: 12),
-                      Text(
-                        "Sign in with Google",
-                        style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              SignButton(txt: 'Sign in with Google',
+                  $AssetsIconsGen: Assets.icons.google,
+                  OnTap: (){}),
               SizedBox(height: 15.h),
-              InkWell(
-                onTap: (){},
-                child: Container(
-                  height: 50.h,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: AppColors.BorderColor,
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(Assets.icons.apple),
-                      const SizedBox(width: 12),
-                      Text(
-                        "Sign in with Apple",
-                        style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              SignButton(txt: 'Sign in with Apple',
+                $AssetsIconsGen: Assets.icons.apple,
+                OnTap: (){}),
               Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Don't have an account?", style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black, fontSize: 14.sp)),
                   SizedBox(width: 5.w),
-                  Text('Register Now', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Primary, fontSize: 14.sp))
+                  TxtButton(
+                      txt: "Register Now",
+                      txtColor: AppColors.Primary,
+                      OnTap: (){}
+                  )
                 ])
             ],
           ),
         ),
       ),
     );
+  }
+  login()
+  async{
+    Dio dio = Dio();
+
+    final response = await dio.post('https://codingarabic.online/api/login',
+        data:
+        {
+          "email" : "sayed332@gmail.com",
+          "password" : "12345678"
+        });
+    debugPrint("Status Code: ${response.statusCode}");
+    debugPrint("Response Data: ${response.data}");
+
   }
 }
