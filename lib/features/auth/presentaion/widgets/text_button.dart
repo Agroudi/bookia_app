@@ -15,7 +15,8 @@ class TxtButton extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return InkWell(onTap: OnTap,
+    return TextButton(
+        onPressed: OnTap,
         child: Text(
             txt,
             style: AppTextStyle.txtStyle.copyWith(

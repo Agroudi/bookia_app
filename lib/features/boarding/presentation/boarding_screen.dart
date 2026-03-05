@@ -22,18 +22,34 @@ class BoardingScreen extends StatelessWidget
             image: DecorationImage(image:Assets.images.onBoardingBg.image().image, fit: BoxFit.cover)),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 22.w),
-          child: Column(
-            children: [
-                SizedBox(height: 135.h),
+          child: SafeArea(
+            child: Column(
+              children: [
+                Align(
+                    alignment: Alignment.topLeft,
+                    child: IconButton(
+                        onPressed: ()
+                        {
+                          if(context.locale.languageCode == 'ar')
+                          {
+                            context.setLocale(Locale('en'));
+                          } else
+                          {
+                            context.setLocale(Locale('ar'));
+                          }
+                          },
+                        icon: Icon(Icons.language, size: 30))),
+                SizedBox(height: 80.h),
                 Assets.icons.logo.image(),
                 SizedBox(height: 28.h),
                 Text(LocaleKeys.on_boarding_statement.tr(), style: AppTextStyle.txtStyle),
                 Spacer(),
-          AppButton(txt: LocaleKeys.login.tr(), OnTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()))),
+                AppButton(txt: LocaleKeys.login.tr(), OnTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()))),
                 SizedBox(height: 15.h),
                 AppButton(txt: LocaleKeys.register.tr(), bgColor: AppColors.White, txtColor: AppColors.Black, OnTap: (){}),
                 SizedBox(height: 94.h),
-              ],
+                ],
+            ),
           ),
         ),
       ),

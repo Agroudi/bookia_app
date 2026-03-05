@@ -3,6 +3,7 @@ import 'package:bookia_app/core/theme/text_style.dart';
 import 'package:bookia_app/core/widgets/app_button.dart';
 import 'package:bookia_app/core/widgets/app_form_field.dart';
 import 'package:bookia_app/core/widgets/back_button.dart';
+import 'package:bookia_app/features/auth/presentaion/register_screen.dart';
 import 'package:bookia_app/features/auth/presentaion/widgets/sign_button.dart';
 import 'package:bookia_app/features/auth/presentaion/widgets/text_button.dart';
 import 'package:bookia_app/gen/assets.gen.dart';
@@ -11,7 +12,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_svg/svg.dart';
 
 
 class LoginScreen extends StatelessWidget
@@ -32,46 +32,45 @@ class LoginScreen extends StatelessWidget
               SizedBox(height: 29.h),
               Text(LocaleKeys.login_statement.tr(), style: AppTextStyle.txtStyle.copyWith(fontSize: 30.sp)),
               SizedBox(height: 32.h),
-              AppFormField(hintTxt: "Enter your email"),
+              AppFormField(hintTxt: LocaleKeys.email_hint.tr()),
               SizedBox(height: 15.h),
-              AppFormField(hintTxt: "Enter your password", obsecureText: false),
+              AppFormField(hintTxt: LocaleKeys.password_hint.tr(), obsecureText: false),
               SizedBox(height: 13.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TxtButton(
-                      txt: "Forgot Password?",
+                      txt: LocaleKeys.forgot_password.tr(),
                     txtColor: AppColors.Black.withOpacity(0.6),
                     OnTap: (){}
                   )
                 ]),
               SizedBox(height: 30.h),
-              AppButton(txt: "Login", OnTap: (){login();}),
+              AppButton(txt: LocaleKeys.login_btn.tr(), OnTap: (){login();}),
               SizedBox(height: 34.h),
               Row(
                   children: [
                     Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, endIndent: 45,)),
-                    Text('Or', style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp)),
+                    Text(LocaleKeys.or.tr(), style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black.withOpacity(0.6), fontSize: 14.sp)),
                     Expanded(child: Divider(thickness: 2, color: AppColors.BorderColor, indent: 45)),
                   ]),
               SizedBox(height: 21.h),
-              SignButton(txt: 'Sign in with Google',
+              SignButton(txt: LocaleKeys.sign_in_google.tr(),
                   $AssetsIconsGen: Assets.icons.google,
                   OnTap: (){}),
               SizedBox(height: 15.h),
-              SignButton(txt: 'Sign in with Apple',
+              SignButton(txt: LocaleKeys.sign_in_apple.tr(),
                 $AssetsIconsGen: Assets.icons.apple,
                 OnTap: (){}),
               Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account?", style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black, fontSize: 14.sp)),
-                  SizedBox(width: 5.w),
+                  Text(LocaleKeys.dont_have_account.tr(), style: AppTextStyle.txtStyle.copyWith(color: AppColors.Black, fontSize: 14.sp)),
                   TxtButton(
-                      txt: "Register Now",
+                      txt: LocaleKeys.register_now.tr(),
                       txtColor: AppColors.Primary,
-                      OnTap: (){}
+                      OnTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()));}
                   )
                 ])
             ],
