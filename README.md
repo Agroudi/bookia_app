@@ -1,14 +1,14 @@
-📱 Bookia App
+<h1>📱 Bookia App</h1>
 
 A modern and scalable Book Store mobile application built with Flutter, designed to provide a seamless experience for browsing, searching, and purchasing books with a clean UI and robust architecture.
 
-🚀 Project Setup & Installation Guide
+<h1>🚀 Project Setup & Installation Guide</h1>
 🔧 Prerequisites
 Flutter (latest stable version)
 Dart SDK
 Android Studio / VS Code
 Emulator or physical device
-📥 Installation Steps
+<h1>📥 Installation Steps</h1>
 
 Clone the repository:
 
@@ -25,7 +25,7 @@ flutter pub get
 Run the app:
 
 flutter run
-🏗️ Architectural Overview
+<h1>🏗️ Architectural Overview</h1>
 project_root/
 │
 ├── assets/
@@ -54,42 +54,30 @@ project_root/
 │   │   └── ...
 │   │
 │   └── main.dart            # Entry point
-⚙️ Features
-
-🔐 Authentication System:
-
+<h1>⚙️ Features</h1>
+🔐 Authentication System
 Login (Email & Password)
 Register new account
 Forgot password flow
 OTP verification (Email / SMS)
-
-🌍 Multi-language Support:
-
+🌍 Multi-language Support
 Arabic 🇪🇬 (RTL)
 English 🇺🇸 (LTR)
 Powered by EasyLocalization
-
-📚 Book Store Functionality:
-
+📚 Book Store Functionality
 Browse books
 View book details
 Search functionality (ready to extend)
-
-💾 Token Management:
-
+💾 Token Management
 Secure token storage using SharedPreferences
 Persistent login support
-
-🎯 Clean Architecture:
-
+🎯 Clean Architecture
 Separation of concerns (Cubit / Repo / Services)
 Scalable and maintainable structure
-
-⚡ Smooth UI & UX:
-
+⚡ Smooth UI & UX
 Responsive design using ScreenUtil
 Clean and modern UI
-🧠 State & Data Management
+<h1>🧠 State & Data Management</h1>
 🔄 State Management
 Flutter Bloc (Cubit)
 Handles authentication states:
@@ -103,7 +91,7 @@ Error handling with status codes
 💾 Local Storage
 SharedPreferences
 Stores authentication token for persistent sessions
-🧩 Key Widgets Used
+<h1>🧩 Key Widgets Used</h1>
 TextFormField → User input (email/password)
 BlocListener → Handle navigation & states
 BlocBuilder → UI updates
@@ -111,7 +99,7 @@ AppButton → Custom reusable button
 ListView → Display book lists
 Navigator / AppRouter → Navigation handling
 SVG Icons → Clean scalable UI assets
-📦 Dependencies
+<h1>📦 Dependencies</h1>
 dependencies:
   flutter:
     sdk: flutter
@@ -121,14 +109,13 @@ dependencies:
   easy_localization:
   flutter_screenutil:
   flutter_svg:
-🎨 UI/UX
+<h1>🎨 UI/UX</h1>
 Clean and modern design
 Responsive across multiple screen sizes
 RTL/LTR fully supported
 Consistent typography and spacing
 Smooth transitions and user flow
-📌 Notes
+<h1>📌 Notes</h1>
 Authentication is fully functional with API integration
 Token is stored locally for auto-login capability
-Architecture is designed for scalability (ready for adding cart, payments, etc.)
-Code follows clean structure and SOLID principles
+Architecture is scalable and ready for future features (cart, payments, etc.)
