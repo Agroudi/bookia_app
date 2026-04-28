@@ -12,7 +12,7 @@ Emulator or physical device
 
 Clone the repository:
 
-git clone https://github.com/your-username/bookia_app.git
+git clone https://github.com/Agroudi/bookia_app.git
 
 Navigate to project directory:
 
