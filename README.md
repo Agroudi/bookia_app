@@ -25,7 +25,10 @@ flutter pub get
 Run the app:
 
 flutter run
+
 <h1>🏗️ Architectural Overview</h1>
+
+```text
 project_root/
 │
 ├── assets/
@@ -54,41 +57,43 @@ project_root/
 │   │   └── ...
 │   │
 │   └── main.dart            # Entry point
+```
+
 <h1>⚙️ Features</h1>
-🔐 Authentication System
+<h2>🔐 Authentication System</h2>
 Login (Email & Password)
 Register new account
 Forgot password flow
 OTP verification (Email / SMS)
-🌍 Multi-language Support
+<h2>🌍 Multi-language Support</h2>
 Arabic 🇪🇬 (RTL)
 English 🇺🇸 (LTR)
 Powered by EasyLocalization
-📚 Book Store Functionality
+<h2>📚 Book Store Functionality</h2>
 Browse books
 View book details
 Search functionality (ready to extend)
-💾 Token Management
+<h2>💾 Token Management</h2>
 Secure token storage using SharedPreferences
 Persistent login support
-🎯 Clean Architecture
+<h2>🎯 Clean Architecture</h2>
 Separation of concerns (Cubit / Repo / Services)
 Scalable and maintainable structure
-⚡ Smooth UI & UX
+<h2>⚡ Smooth UI & UX</h2>
 Responsive design using ScreenUtil
 Clean and modern UI
 <h1>🧠 State & Data Management</h1>
-🔄 State Management
+<h2>🔄 State Management</h2>
 Flutter Bloc (Cubit)
 Handles authentication states:
 Loading
 Success
 Error
-🌐 API Handling
+<h2>🌐 API Handling</h2>
 Dio
 REST API integration
 Error handling with status codes
-💾 Local Storage
+<h2>💾 Local Storage</h2>
 SharedPreferences
 Stores authentication token for persistent sessions
 <h1>🧩 Key Widgets Used</h1>
