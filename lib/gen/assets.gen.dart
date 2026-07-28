@@ -11,6 +11,16 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsAnimationsGen {
+  const $AssetsAnimationsGen();
+
+  /// File path: assets/animations/book_loader.json
+  String get bookLoader => 'assets/animations/book_loader.json';
+
+  /// List of all assets
+  List<String> get values => [bookLoader];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -21,17 +31,67 @@ class $AssetsIconsGen {
   /// File path: assets/icons/apple.svg
   String get apple => 'assets/icons/apple.svg';
 
+  /// File path: assets/icons/arrow_down.svg
+  String get arrowDown => 'assets/icons/arrow_down.svg';
+
+  /// File path: assets/icons/back_arrow.svg
+  String get backArrow => 'assets/icons/back_arrow.svg';
+
+  /// File path: assets/icons/book_logo.svg
+  String get bookLogo => 'assets/icons/book_logo.svg';
+
+  /// File path: assets/icons/bookmark.svg
+  String get bookmark => 'assets/icons/bookmark.svg';
+
+  /// File path: assets/icons/camera.svg
+  String get camera => 'assets/icons/camera.svg';
+
+  /// File path: assets/icons/cart.svg
+  String get cart => 'assets/icons/cart.svg';
+
+  /// File path: assets/icons/chevron_right.svg
+  String get chevronRight => 'assets/icons/chevron_right.svg';
+
   /// File path: assets/icons/eye.svg
   String get eye => 'assets/icons/eye.svg';
 
   /// File path: assets/icons/google.svg
   String get google => 'assets/icons/google.svg';
 
+  /// File path: assets/icons/home.svg
+  String get home => 'assets/icons/home.svg';
+
   /// File path: assets/icons/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/icons/logo.png');
 
+  /// File path: assets/icons/logout.svg
+  String get logout => 'assets/icons/logout.svg';
+
+  /// File path: assets/icons/profile.svg
+  String get profile => 'assets/icons/profile.svg';
+
+  /// File path: assets/icons/search.svg
+  String get search => 'assets/icons/search.svg';
+
   /// List of all assets
-  List<dynamic> get values => [successmark, apple, eye, google, logo];
+  List<dynamic> get values => [
+    successmark,
+    apple,
+    arrowDown,
+    backArrow,
+    bookLogo,
+    bookmark,
+    camera,
+    cart,
+    chevronRight,
+    eye,
+    google,
+    home,
+    logo,
+    logout,
+    profile,
+    search,
+  ];
 }
 
 class $AssetsImagesGen {
@@ -64,6 +124,7 @@ class $AssetsTranslationsGen {
 class Assets {
   const Assets._();
 
+  static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();

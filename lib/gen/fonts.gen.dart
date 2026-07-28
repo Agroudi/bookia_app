@@ -11,6 +11,12 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: Cairo
+  static const String cairo = 'Cairo';
+
   /// Font family: DMSerif-Regular
   static const String dMSerifRegular = 'DMSerif-Regular';
+
+  /// Font family: NunitoSans
+  static const String nunitoSans = 'NunitoSans';
 }
