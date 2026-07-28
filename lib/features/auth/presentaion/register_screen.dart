@@ -3,7 +3,7 @@ import 'package:bookia_app/core/theme/text_style.dart';
 import 'package:bookia_app/core/widgets/app_button.dart';
 import 'package:bookia_app/core/widgets/app_form_field.dart';
 import 'package:bookia_app/core/widgets/back_button.dart';
-import 'package:bookia_app/features/auth/presentaion/widgets/text_button.dart';
+import 'package:bookia_app/features/auth/widgets/text_button.dart';
 import 'package:bookia_app/gen/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class RegisterScreen extends StatelessWidget
                     TxtButton(
                         txt: LocaleKeys.login.tr(),
                         txtColor: AppColors.Primary,
-                        OnTap: (){}
+                        OnTap: (){Navigator.pop(context);}
                     )
                   ])
             ],
