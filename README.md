@@ -335,21 +335,6 @@ Glassmorphic ("glacier") toasts for success / error / info / warning
 Book-themed Lottie loader as the single, non-dismissible loading state
 
 <h1>📌 Notes</h1>
-
-Full commerce flow is functional and integrated with the live API
-OTP powers both password reset and post-registration email activation
-Token is securely stored for auto-login, and cleared automatically on 401
-Exiting the app requires two back presses — a toast, then a cancellable confirmation dialog
-Product descriptions arrive as HTML from the API and are sanitized before rendering
-Built with a zero-bugs mindset and strict adherence to the Figma design
-=======
-<h1>🎨 UI/UX</h1>
-Clean and modern design
-Responsive across multiple screen sizes
-RTL/LTR fully supported
-Consistent typography and spacing
-Smooth transitions and user flow
-<h1>📌 Notes</h1>
 Authentication is fully functional with API integration
 Token is stored locally for auto-login capability
 Architecture is scalable and ready for future features (cart, payments, etc.)
