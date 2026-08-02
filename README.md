@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <h1>🎥 App Demo</h1>
 
-<!-- Drag the video into a GitHub issue/PR comment, then paste the generated
-     https://github.com/user-attachments/assets/... URL on the line below,
-     replacing it entirely. Keep it a bare URL on its own line so GitHub
-     renders it as an inline player. -->
+https://github.com/user-attachments/assets/672f1709-f737-4c78-b93c-1d7484e36731
 
 ▶️ _Demo video — to be added._
 
@@ -38,7 +34,7 @@ Generate assets & localization keys:
 dart run build_runner build --delete-conflicting-outputs
 dart run easy_localization:generate -S assets/translations -O lib/gen -o locale_keys.g.dart -f keys
 Run the app:
-=======
+
 <h1>📱 Bookia App</h1>
 
 A modern and scalable Book Store mobile application built with Flutter, designed to provide a seamless experience for browsing, searching, and purchasing books with a clean UI and robust architecture.
@@ -65,7 +61,6 @@ flutter pub get
 
 Run the app:
 
->>>>>>> 25811625c3c8ba8bcd34f12e88eebe0e331a9d49
 flutter run
 
 <h1>🏗️ Architectural Overview</h1>
@@ -74,7 +69,6 @@ flutter run
 project_root/
 │
 ├── assets/
-<<<<<<< HEAD
 │   ├── animations/                         # Lottie (book_loader)
 │   ├── fonts/                              # DM Serif Display, Nunito Sans, Cairo (Arabic)
 │   ├── icons/                              # SVG icons exported from Figma
@@ -263,33 +257,6 @@ dependencies:
   flutter_bloc:
   dio:
   get_it:
-=======
-│   ├── images/              # App images & icons
-│   ├── fonts/               # Custom fonts
-│   └── translations/        # Localization files (AR / EN)
-│
-├── lib/
-│   ├── core/
-│   │   ├── routing/         # App routing (AppRouter)
-│   │   ├── theme/           # Colors & text styles
-│   │   ├── widgets/         # Global reusable widgets
-│   │   └── services/        # Dio setup & helpers
-│   │
-│   ├── features/
-│   │   ├── auth/
-│   │   │   ├── cubit/       # State management (AuthCubit)
-│   │   │   ├── data/
-│   │   │   │   ├── repo/    # Auth repository
-│   │   │   │   ├── services/# API services
-│   │   │   │   └── local/   # Local storage (token)
-│   │   │   └── presentation/# UI screens
-│   │   │
-│   │   ├── home/
-│   │   ├── boarding/
-│   │   └── ...
-│   │
-│   └── main.dart            # Entry point
-```
 
 <h1>⚙️ Features</h1>
 <h2>🔐 Authentication System</h2>
@@ -342,12 +309,10 @@ dependencies:
     sdk: flutter
   flutter_bloc:
   dio:
->>>>>>> 25811625c3c8ba8bcd34f12e88eebe0e331a9d49
   shared_preferences:
   easy_localization:
   flutter_screenutil:
   flutter_svg:
-<<<<<<< HEAD
   lottie:
   toastification:
   cached_network_image:
@@ -374,6 +339,7 @@ Custom fonts: DM Serif Display and Nunito Sans for Latin, Cairo as an Arabic fal
 Floating bottom navigation card with a live cart-item count badge
 
 <h1>📌 Notes</h1>
+<<<<<<< HEAD
 
 Full commerce flow — browse, search, wishlist, cart, checkout, order history — is functional and integrated with the live REST API
 OTP verification powers both password reset and post-registration email activation, with a 60-second resend cooldown
@@ -386,3 +352,8 @@ Cart quantity stepper is clamped to available stock, preventing over-ordering
 The codebase compiles with zero analyzer warnings
 Built with strict adherence to the Figma design and SOLID architecture principles
 
+=======
+Authentication is fully functional with API integration
+Token is stored locally for auto-login capability
+Architecture is scalable and ready for future features (cart, payments, etc.)
+>>>>>>> 2101c085d88abfc3688f29e483e4f8bcc6e7a47e
