@@ -2,8 +2,6 @@
 
 https://github.com/user-attachments/assets/672f1709-f737-4c78-b93c-1d7484e36731
 
-▶️ _Demo video — to be added._
-
 <p align="center">
 Watch the latest application demo showcasing the full shopping flow, authentication with OTP, cart & wishlist, order placement, Arabic/English localization, and the Lottie-driven loading experience.
 </p>
