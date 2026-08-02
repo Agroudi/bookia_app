@@ -34,7 +34,7 @@ Generate assets & localization keys:
 dart run build_runner build --delete-conflicting-outputs
 dart run easy_localization:generate -S assets/translations -O lib/gen -o locale_keys.g.dart -f keys
 Run the app:
-=======
+
 <h1>📱 Bookia App</h1>
 
 A modern and scalable Book Store mobile application built with Flutter, designed to provide a seamless experience for browsing, searching, and purchasing books with a clean UI and robust architecture.
@@ -69,7 +69,6 @@ flutter run
 project_root/
 │
 ├── assets/
-<<<<<<< HEAD
 │   ├── animations/                         # Lottie (book_loader)
 │   ├── fonts/                              # DM Serif Display, Nunito Sans, Cairo (Arabic)
 │   ├── icons/                              # SVG icons exported from Figma
@@ -258,33 +257,6 @@ dependencies:
   flutter_bloc:
   dio:
   get_it:
-=======
-│   ├── images/              # App images & icons
-│   ├── fonts/               # Custom fonts
-│   └── translations/        # Localization files (AR / EN)
-│
-├── lib/
-│   ├── core/
-│   │   ├── routing/         # App routing (AppRouter)
-│   │   ├── theme/           # Colors & text styles
-│   │   ├── widgets/         # Global reusable widgets
-│   │   └── services/        # Dio setup & helpers
-│   │
-│   ├── features/
-│   │   ├── auth/
-│   │   │   ├── cubit/       # State management (AuthCubit)
-│   │   │   ├── data/
-│   │   │   │   ├── repo/    # Auth repository
-│   │   │   │   ├── services/# API services
-│   │   │   │   └── local/   # Local storage (token)
-│   │   │   └── presentation/# UI screens
-│   │   │
-│   │   ├── home/
-│   │   ├── boarding/
-│   │   └── ...
-│   │
-│   └── main.dart            # Entry point
-```
 
 <h1>⚙️ Features</h1>
 <h2>🔐 Authentication System</h2>
@@ -337,12 +309,10 @@ dependencies:
     sdk: flutter
   flutter_bloc:
   dio:
->>>>>>> 25811625c3c8ba8bcd34f12e88eebe0e331a9d49
   shared_preferences:
   easy_localization:
   flutter_screenutil:
   flutter_svg:
-<<<<<<< HEAD
   lottie:
   toastification:
   cached_network_image:
