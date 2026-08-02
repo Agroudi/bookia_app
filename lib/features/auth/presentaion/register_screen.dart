@@ -6,7 +6,6 @@ import 'package:bookia_app/core/utils/validators.dart';
 import 'package:bookia_app/core/widgets/app_button.dart';
 import 'package:bookia_app/core/widgets/app_form_field.dart';
 import 'package:bookia_app/features/auth/cubit/auth_cubit.dart';
-import 'package:bookia_app/features/auth/presentaion/otp_verification_screen.dart';
 import 'package:bookia_app/features/auth/widgets/auth_scaffold.dart';
 import 'package:bookia_app/gen/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -57,17 +56,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
       case AuthLoading():
         StateFeedback.loading();
 
-      case RegisterSucceeded(:final message, :final user):
-        StateFeedback.success(message, fallbackKey: LocaleKeys.code_sent);
-        // The account exists but is unverified, so go to activation rather
-        // than into the app.
-        Navigator.of(context).pushNamed(
-          Routes.otpScreen,
-          arguments: OtpArgs(
-            email: user.email,
-            purpose: OtpPurpose.verifyEmail,
-          ),
-        );
+      case RegisterSucceeded(:final message):
+        StateFeedback.success(message, fallbackKey: LocaleKeys.register_btn);
+        Navigator.of(
+          context,
+        ).pushNamedAndRemoveUntil(Routes.layoutScreen, (route) => false);
 
       case AuthFailed(:final failure):
         if (failure is ValidationFailure) {

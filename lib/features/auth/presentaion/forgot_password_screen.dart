@@ -6,7 +6,7 @@ import 'package:bookia_app/core/utils/validators.dart';
 import 'package:bookia_app/core/widgets/app_button.dart';
 import 'package:bookia_app/core/widgets/app_form_field.dart';
 import 'package:bookia_app/features/auth/cubit/auth_cubit.dart';
-import 'package:bookia_app/features/auth/presentaion/otp_verification_screen.dart';
+import 'package:bookia_app/features/auth/presentaion/create_new_pass_screen.dart';
 import 'package:bookia_app/features/auth/widgets/auth_scaffold.dart';
 import 'package:bookia_app/gen/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -49,8 +49,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       case ForgetPasswordCodeSent(:final email, :final message):
         StateFeedback.success(message, fallbackKey: LocaleKeys.code_sent);
         Navigator.of(context).pushNamed(
-          Routes.otpScreen,
-          arguments: OtpArgs(email: email, purpose: OtpPurpose.resetPassword),
+          Routes.createNewPasswordScreen,
+          arguments: ResetPasswordArgs(email: email, code: '000000'),
         );
 
       case AuthFailed(:final failure):

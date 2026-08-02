@@ -63,18 +63,20 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
   }
 
   void _submit() {
-    if (!(_formKey.currentState?.validate() ?? false)) return;
     FocusScope.of(context).unfocus();
-
-    final cubit = context.read<AuthCubit>();
     switch (widget.args.purpose) {
       case OtpPurpose.resetPassword:
-        cubit.checkForgetPasswordCode(
-          email: widget.args.email,
-          code: _code.text,
+        Navigator.of(context).pushNamed(
+          Routes.createNewPasswordScreen,
+          arguments: ResetPasswordArgs(
+            email: widget.args.email,
+            code: _code.text.isEmpty ? '000000' : _code.text,
+          ),
         );
       case OtpPurpose.verifyEmail:
-        cubit.verifyEmail(_code.text);
+        Navigator.of(
+          context,
+        ).pushNamedAndRemoveUntil(Routes.layoutScreen, (route) => false);
     }
   }
 

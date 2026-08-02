@@ -361,31 +361,28 @@ dependencies:
 
 <h1>🎨 UI/UX</h1>
 
-Clean and modern design
-Fully responsive across devices
-RTL / LTR fully supported and verified on device
-Consistent spacing & typography driven by design tokens
-Smooth transitions and user flow
-Glassmorphic ("glacier") toasts for success / error / info / warning
-Book-themed Lottie loader as the single, non-dismissible loading state
+Pixel-perfect implementation translated from the Figma design (375×812 canvas)
+Fully responsive across devices using ScreenUtil scaling
+Complete RTL / LTR support — directional padding, flipped back arrows, mirrored navigation bar
+Consistent spacing and typography driven by centralized design tokens (AppColors, AppRadius, AppSpacing)
+Locale-aware page transitions: slides enter from the trailing edge, reversing direction under Arabic
+Animated tab switching via PageView with preserved scroll position and loaded data across every tab
+Glassmorphic ("glacier") toasts for success, error, info, and warning — frosted backdrop blur with a colour-coded accent rail
+Book-themed Lottie loader (book_loader) used as the single, non-dismissible loading identity — both full-screen blocking overlay and inline variants
+Designed empty states and error states for every list surface
+Custom fonts: DM Serif Display and Nunito Sans for Latin, Cairo as an Arabic fallback
+Floating bottom navigation card with a live cart-item count badge
 
 <h1>📌 Notes</h1>
 
-Full commerce flow is functional and integrated with the live API
-OTP powers both password reset and post-registration email activation
-Token is securely stored for auto-login, and cleared automatically on 401
-Exiting the app requires two back presses — a toast, then a cancellable confirmation dialog
-Product descriptions arrive as HTML from the API and are sanitized before rendering
-Built with a zero-bugs mindset and strict adherence to the Figma design
-=======
-<h1>🎨 UI/UX</h1>
-Clean and modern design
-Responsive across multiple screen sizes
-RTL/LTR fully supported
-Consistent typography and spacing
-Smooth transitions and user flow
-<h1>📌 Notes</h1>
-Authentication is fully functional with API integration
-Token is stored locally for auto-login capability
-Architecture is scalable and ready for future features (cart, payments, etc.)
->>>>>>> 25811625c3c8ba8bcd34f12e88eebe0e331a9d49
+Full commerce flow — browse, search, wishlist, cart, checkout, order history — is functional and integrated with the live REST API
+OTP verification powers both password reset and post-registration email activation, with a 60-second resend cooldown
+Bearer token is securely stored via SharedPreferences and attached by a Dio interceptor; cleared automatically with a redirect on 401
+Exiting the app is guarded: first back press shows a toast, second within 3 seconds opens a cancellable confirmation dialog
+Product descriptions arrive as HTML from the API and are stripped / sanitized before rendering
+Server-side 422 validation errors are mapped back onto the exact input field that caused them
+Per-item concurrency guards prevent double-toggling a wishlist item or cart mutation while a request is in flight
+Cart quantity stepper is clamped to available stock, preventing over-ordering
+The codebase compiles with zero analyzer warnings
+Built with strict adherence to the Figma design and SOLID architecture principles
+
