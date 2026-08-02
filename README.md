@@ -246,16 +246,6 @@ AppLoader → The book_loader Lottie, in page / pagination / inline sizes
 LoadingOverlay → Full-screen, non-dismissible blocking loader
 SVG Icons → Scalable UI assets
 
-<h1>📦 Dependencies</h1>
-
-dependencies:
-  flutter:
-    sdk: flutter
-  cupertino_icons:
-  flutter_bloc:
-  dio:
-  get_it:
-
 <h1>⚙️ Features</h1>
 <h2>🔐 Authentication System</h2>
 Login (Email & Password)
@@ -337,7 +327,6 @@ Custom fonts: DM Serif Display and Nunito Sans for Latin, Cairo as an Arabic fal
 Floating bottom navigation card with a live cart-item count badge
 
 <h1>📌 Notes</h1>
-<<<<<<< HEAD
 
 Full commerce flow — browse, search, wishlist, cart, checkout, order history — is functional and integrated with the live REST API
 OTP verification powers both password reset and post-registration email activation, with a 60-second resend cooldown
@@ -349,9 +338,7 @@ Per-item concurrency guards prevent double-toggling a wishlist item or cart muta
 Cart quantity stepper is clamped to available stock, preventing over-ordering
 The codebase compiles with zero analyzer warnings
 Built with strict adherence to the Figma design and SOLID architecture principles
-
-=======
 Authentication is fully functional with API integration
 Token is stored locally for auto-login capability
 Architecture is scalable and ready for future features (cart, payments, etc.)
->>>>>>> 2101c085d88abfc3688f29e483e4f8bcc6e7a47e
+
