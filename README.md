@@ -292,6 +292,7 @@ ListView → Display book lists
 Navigator / AppRouter → Navigation handling
 SVG Icons → Clean scalable UI assets
 <h1>📦 Dependencies</h1>
+```text
 dependencies:
   flutter:
     sdk: flutter
@@ -311,6 +312,7 @@ dependencies:
   flutter_native_splash:
   flutter_gen_runner:
   build_runner:
+  ```
 
 <h1>🎨 UI/UX</h1>
 
