@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <h1>🎥 App Demo</h1>
 
-<!-- Drag the video into a GitHub issue/PR comment, then paste the generated
-     https://github.com/user-attachments/assets/... URL on the line below,
-     replacing it entirely. Keep it a bare URL on its own line so GitHub
-     renders it as an inline player. -->
+https://github.com/user-attachments/assets/672f1709-f737-4c78-b93c-1d7484e36731
 
 ▶️ _Demo video — to be added._
 
@@ -388,4 +384,3 @@ Smooth transitions and user flow
 Authentication is fully functional with API integration
 Token is stored locally for auto-login capability
 Architecture is scalable and ready for future features (cart, payments, etc.)
->>>>>>> 25811625c3c8ba8bcd34f12e88eebe0e331a9d49
