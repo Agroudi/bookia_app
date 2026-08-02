@@ -61,7 +61,6 @@ flutter pub get
 
 Run the app:
 
->>>>>>> 25811625c3c8ba8bcd34f12e88eebe0e331a9d49
 flutter run
 
 <h1>🏗️ Architectural Overview</h1>
